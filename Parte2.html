@@ -17,23 +17,39 @@
         }while (op < 1 || op > 4);
 
         switch(op){
-            case 1: alert("El resultado de la suma es " + sumar(a,b)); break;
-            case 2: alert("El resultado de la resta es " + restar(a,b)); break;
-            case 3: alert("El resultado de la multiplicación es " + multiplicar(a,b)); break;
-            case 4: alert("El resultado de la división es " + dividir(a,b)); break;
+            case 1: calculadora(a, b, "Sumar"); break;
+            case 2: calculadora(a, b, "Restar") ; break;
+            case 3: calculadora(a, b, "Multiplicar"); break;
+            case 4: calculadora(a, b, "Dividir"); break;
         }
 
+        function calculadora(a, b, oper){
+            switch(oper){
+            case "Sumar": alert("El resultado de la suma es " + sumar(a,b)); break;
+            case "Restar": alert("El resultado de la resta es " + restar(a,b)); break;
+            case "Multiplicar": alert("El resultado de la multiplicación es " + multiplicar(a,b)); break;
+            case "Dividir": alert("El resultado de la división es " + dividir(a,b)); break;
+        }
+        }
         function sumar(a,b){
-            return a+b;
+            let resultado = 0;
+            resultado = a + b;
+            return resultado;
         }
         function restar(a,b){
-            return a-b;
+            let resultado = 0;
+            resultado = a - b;
+            return resultado;
         }
         function multiplicar(a,b){
-            return a*b;
+            let resultado = 0; 
+            resultado = a * b;
+            return resultado;
         }
         function dividir(a,b){
-            return a/b;
+            let resultado = 0;
+            resultado = a / b;
+            return resultado;
         }
     </script>
 </body>
